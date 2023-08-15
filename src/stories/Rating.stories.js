@@ -9,6 +9,3 @@ export default {
 const Template = args => <Ratingf {...args} />
 
 export const primary = Template.bind({})
-primary.args = {
-  value: 3,
-}

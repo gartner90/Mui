@@ -1,17 +1,19 @@
-import PropTypes from "prop-types"
-import Rating from '@mui/material/Rating';
+import * as React from 'react';
+import { Box, Rating } from "@mui/material";
 
-function Ratingf({ value = 3 }) {
+function Ratingf() {
+  const [val, setValue] = React.useState(2);
   return (
-    <Rating
+    <Box>
+      <Rating
         name="simple-controlled"
-        value={value}
+        value={val}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
       />
+    </Box>
   )
-}
-
-Ratingf.propTypes = {
-  value: PropTypes.number,
 }
 
 export default Ratingf
